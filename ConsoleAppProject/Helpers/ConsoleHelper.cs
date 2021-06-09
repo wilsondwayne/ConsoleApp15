@@ -1,8 +1,7 @@
 ﻿using System;
 
-namespace ConsoleAppProject.Helpers
+namespace ConsoleAppProject
 {
-
     /// <summary>
     /// This is a general purpose class containing methods
     /// that can be used by other console based classes.
@@ -11,7 +10,7 @@ namespace ConsoleAppProject.Helpers
     /// There are methods for outputting a main heading
     /// and a title.
     /// <author>
-    /// Derek Peacock 2021
+    /// Dwayne Wilson 2021
     /// </author>
     /// </summary>
     public static class ConsoleHelper
@@ -30,7 +29,7 @@ namespace ConsoleAppProject.Helpers
 
             // Get the user's choice
 
-            int choiceNo = (int)InputNumber("\n Please enter your choice > ", 
+            int choiceNo = (int)InputNumber("\n Please enter your choice here > ",
                                             1, choices.Length);
             return choiceNo;
         }
@@ -74,7 +73,7 @@ namespace ConsoleAppProject.Helpers
                 catch (Exception)
                 {
                     isValid = false;
-                    Console.WriteLine(" INVALID NUMBER!");
+                    Console.WriteLine(" THE NUMBER YOU HAVE ENTERED IS INVALID!");
                 }
 
             } while (!isValid);
@@ -125,7 +124,7 @@ namespace ConsoleAppProject.Helpers
 
             Console.WriteLine("\n ---------------------------------");
             Console.WriteLine($"    {heading}          ");
-            Console.WriteLine("     by Derek Peacock           ");
+            Console.WriteLine("     by Leo Juster        ");
             Console.WriteLine(" ---------------------------------" +
                 "\n");
 
@@ -143,7 +142,7 @@ namespace ConsoleAppProject.Helpers
             Console.WriteLine($"\n {title}");
             Console.Write(" ");
 
-            for(int count = 0; count <= title.Length; count++)
+            for (int count = 0; count <= title.Length; count++)
             {
                 Console.Write("-");
             }

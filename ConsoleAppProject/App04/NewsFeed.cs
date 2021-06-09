@@ -17,61 +17,109 @@ namespace ConsoleAppProject.App04
     ///<author>
     ///  Michael Kölling and David J. Barnes
     ///  version 0.1
-    ///</author> 
+    ///</Leo Juster> 
     public class NewsFeed
     {
-        private readonly List<MessagePost> messages;
-        private readonly List<PhotoPost> photos;
+        /// <summary>
+        /// Post arraylist.
+        /// </summary>
+        private readonly List<Post> Posts;
 
         ///<summary>
-        /// Construct an empty news feed.
+        /// Empty news feed.
         ///</summary>
         public NewsFeed()
         {
-            messages = new List<MessagePost>();
-            photos = new List<PhotoPost>();
+            Posts = new List<Post>();
         }
 
-
-        ///<summary>
+        /// <summary>
         /// Add a text post to the news feed.
-        /// 
-        /// @param text  The text post to be added.
-        ///</summary>
+        /// </summary>
         public void AddMessagePost(MessagePost message)
         {
-            messages.Add(message);
+            Posts.Add(message);
         }
 
-        ///<summary>
+        /// <summary>
         /// Add a photo post to the news feed.
-        /// 
-        /// @param photo  The photo post to be added.
-        ///</summary>
+        /// </summary>
         public void AddPhotoPost(PhotoPost photo)
         {
-            photos.Add(photo);
+            Posts.Add(photo);
         }
 
         ///<summary>
-        /// Show the news feed. Currently: print the news feed details to the
-        /// terminal. (To do: replace this later with display in web browser.)
+        /// This is what will show you the news feed.
         ///</summary>
         public void Display()
         {
             // display all text posts
-            foreach (MessagePost message in messages)
+            foreach (Post Post in Posts)
             {
-                message.Display();
+                Post.Display();
                 Console.WriteLine();   // empty line between posts
+            }
+        }
+
+        /// <summary>
+        /// Allows you to fins post by username.
+        /// </summary>
+        public void FindUser(string user)
+        {
+            int counter = 0;
+
+            foreach (Post Post in Posts)
+            {
+                if (Post.Username == user)
+                {
+                    Post.Display();
+                    Console.WriteLine();
+                    counter++;
+                }
+            }
+            if (counter == 0)
+            {
+                Console.WriteLine("\nNo such user exists in the current context ");
+            }
+        }
+
+        /// <summary>
+        /// This function will find a post by using the ID.
+        /// </summary>
+        public void FindID(int id)
+        {
+            int counter = 0;
+
+            foreach (Post Post in Posts)
+            {
+                if (Post.ID == id)
+                {
+                    Posts.Remove(Post);
+                    Console.WriteLine("Your post has been removed ");
+                    return;
+                }
             }
 
-            // display all photos
-            foreach (PhotoPost photo in photos)
+            if (counter < 1)
             {
-                photo.Display();
-                Console.WriteLine();   // empty line between posts
+                Console.WriteLine("No such ID of a post exists ");
             }
+        }
+
+        /// <summary>
+        /// This will allows user to find a post by the ID.
+        /// </summary>
+        public Post FindPost(int id)
+        {
+            foreach (Post post in Posts)
+            {
+                if (id == post.ID)
+                {
+                    return post;
+                }
+            }
+            return null;
         }
     }
 
