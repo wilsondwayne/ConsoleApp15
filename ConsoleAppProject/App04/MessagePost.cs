@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace ConsoleAppProject.App04
 {
@@ -11,7 +10,7 @@ namespace ConsoleAppProject.App04
     /// <author>
     /// Michael Kölling and David J. Barnes
     /// version 0.1
-    /// </Dwayne Wilson>
+    /// </Leo Juster>
     public class MessagePost : Post
     {
         public String Message { get; }
