@@ -10,12 +10,12 @@ namespace ConsoleAppProject
     /// when the application is started.  It will be used
     /// to start Apps 01 to 05 for CO453 CW1
     /// This Project has been modified by:
-    /// dwayne wilson Version 0.1
+    /// Dwayne Wilson Version 0.1
     /// </summary>
     public static class Program
     {
         /// <summary>
-        /// This method will print the heading title.
+        /// This method will sho the heading title.
         /// conrol the color of the text.
         /// And run both distance converter and BMI application.
         /// </summary>
