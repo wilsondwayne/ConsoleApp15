@@ -9,7 +9,6 @@ namespace ConsoleAppProject
     /// user to select a choice from a list of choices.
     /// There are methods for outputting a main heading
     /// and a title.
-    /// <author>
     /// Dwayne Wilson 2021
     /// </author>
     /// </summary>

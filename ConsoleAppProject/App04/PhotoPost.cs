@@ -9,7 +9,7 @@ namespace ConsoleAppProject.App04
     /// The main part of the post consists of a photo and a caption. 
     /// Other data, such as author and time, are also stored.
     ///</summary>
-    /// <author>
+    /// Dwayne Wilson
     /// Michael Kölling and David J. Barnes
     /// @version 0.1
     /// </author>

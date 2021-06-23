@@ -25,7 +25,7 @@ namespace ConsoleAppProject.App04
         }
 
         /// <summary>
-        /// The display menu for the app.
+        /// Shows menu for the app.
         /// </summary>
         public void DisplayMenu()
         {
@@ -112,7 +112,7 @@ namespace ConsoleAppProject.App04
         }
 
         /// <summary>
-        /// This allows to you search (find) users via their ussername.
+        /// This allows to you search (find) users by their username.
         /// </summary>
         public void FindUserPosts()
         {
@@ -123,7 +123,7 @@ namespace ConsoleAppProject.App04
         }
 
         /// <summary>
-        /// This allows you to remove/delete the post you have posted.
+        /// This allows you to delete the post you have posted.
         /// </summary>
         public void RemovePost()
         {

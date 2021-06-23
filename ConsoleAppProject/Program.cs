@@ -11,7 +11,6 @@ namespace ConsoleAppProject
     /// to start Apps 01 to 05 for CO453 CW1
     /// This Project has been modified by:
     /// Dwayne Wilson Version 0.1
-    /// </summary>
     public static class Program
     {
         /// <summary>

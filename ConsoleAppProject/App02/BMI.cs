@@ -43,10 +43,8 @@ namespace ConsoleAppProject.App02
         }
 
         /// <summary>
-        /// In this method message will be printed allowing the
-        /// user to choose their Unit of choice and following will also
-        /// be messages asking for weight and height in the unit which they have
-        /// chosen to be meausre in. 
+        ///  This method will display a message allowing the user to choose their 
+        /// unit of choice.It will ask for their weight height which they have chosen to measure in.
         /// </summary>
         public void TypeOfUnit()
         {
@@ -119,7 +117,7 @@ namespace ConsoleAppProject.App02
 
         /// <summary>
         /// This method will print out the results for
-        /// the user and will also tell them waht category
+        /// the user and will also tell them what category
         /// they are in.
         /// </summary>
         /// <param name="BMI"></param>
@@ -165,7 +163,7 @@ namespace ConsoleAppProject.App02
         /// <summary>
         /// This is an ethnic message that will print at the end
         /// of the test to give the user of additonal information they
-        /// will need to know.
+        /// will need to know.If they are of an ethnic background they should take atcion.
         /// </summary>
         public void EthnicMessage()
         {

@@ -41,7 +41,7 @@ namespace ConsoleAppProject.App01
 
 
         /// <summary>
-        /// The purpose of this method is to call the other methods
+        /// This method is supposed to call upon other methods.
         /// </summary>
         public void ConvertDistance()
         {
@@ -60,7 +60,7 @@ namespace ConsoleAppProject.App01
 
         /// <summary>
         /// This method calcluates the distances
-        /// depending on what they user chooses.
+        /// depending on what the user has choose.
         /// </summary>
         private void CalculateDistance()
         {
@@ -131,7 +131,7 @@ namespace ConsoleAppProject.App01
         }
 
         /// <summary>
-        /// This method will display the user choices.
+        /// This method will show their user choices.
         /// </summary>
         /// <param name="prompt"></param>
         /// <returns></returns>

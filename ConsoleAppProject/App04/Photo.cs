@@ -46,7 +46,7 @@ namespace ConsoleAppProject.App04
         }
 
         /// <summary>
-        /// This is where the user can like the post.
+        /// Here you can like the users post. .
         /// (only 1 like)
         /// </summary>
         public void Like()
@@ -55,7 +55,7 @@ namespace ConsoleAppProject.App04
         }
 
         ///<summary>
-        /// This is where the user can chose to unlike the post.
+        /// Here you can unlike the users post.
         ///</summary>
         public void Unlike()
         {
@@ -66,7 +66,7 @@ namespace ConsoleAppProject.App04
         }
 
         ///<summary>
-        /// This is where a comment can be added to the post.
+        /// This is where you can comment to the post.
         /// </summary>       
         public void AddComment(String text)
         {
