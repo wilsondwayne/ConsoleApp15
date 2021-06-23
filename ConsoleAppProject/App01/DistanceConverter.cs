@@ -2,7 +2,7 @@
 namespace ConsoleAppProject.App01
 {
     /// <summary>
-    /// The app iwll prompt the user to input a distance
+    /// The app wll prompt the user to input a distance
     /// in one unit (fromUnit) and will calculate
     /// and output the distance in another unit (toUnit).
     /// </summary>
@@ -19,7 +19,6 @@ namespace ConsoleAppProject.App01
         public const int FEET_IN_MILES = 5280;
 
         public const double METRES_IN_MILES = 1609.34;
-
 
         public const double FEET_IN_METRES = 3.280884;
 
@@ -175,7 +174,7 @@ namespace ConsoleAppProject.App01
         }
 
         /// <summary>
-        /// This is a short descriptoon of the programme and the author of it
+        /// This is a short descripton of the programme and the author of it
         /// </summary>
         private void OutputHeading()
         {
