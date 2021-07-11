@@ -5,7 +5,7 @@ using System.Text;
 namespace ConsoleAppProject.App04
 {
     /// <summary>
-    /// This si the class where most methods are held in.
+    /// This is the class where most methods are held in.
     /// Version 1.0
     /// Dwayne Wilson
     /// </summary>

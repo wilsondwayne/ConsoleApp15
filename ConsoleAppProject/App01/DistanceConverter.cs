@@ -2,7 +2,11 @@
 namespace ConsoleAppProject.App01
 {
     /// <summary>
+<<<<<<< HEAD
     /// The app will prompt the user to input a distance
+=======
+    /// The app wll prompt the user to input a distance
+>>>>>>> 83cb233aa7eb8b9c8a4f72f7656a83ffcb859fd7
     /// in one unit (fromUnit) and will calculate
     /// and output the distance in another unit (toUnit).
     /// </summary>
@@ -12,7 +16,19 @@ namespace ConsoleAppProject.App01
     
     public class DistanceConverter 
     {
+<<<<<<< HEAD
         public const int feet_in_miles = 5280;
+=======
+        /// <summary>
+        /// Conversions constants
+        /// </summary>
+        /// 
+        public const int FEET_IN_MILES = 5280;
+
+        public const double METRES_IN_MILES = 1609.34;
+
+        public const double FEET_IN_METRES = 3.280884;
+>>>>>>> 83cb233aa7eb8b9c8a4f72f7656a83ffcb859fd7
 
         private double miles;
 
@@ -73,10 +89,24 @@ namespace ConsoleAppProject.App01
 
 
 
+<<<<<<< HEAD
 
 
 
 
+=======
+        /// <summary>
+        /// This is a short descripton of the programme and the author of it
+        /// </summary>
+        private void OutputHeading()
+        {
+            Console.WriteLine("\n------------------------------");
+            Console.WriteLine("\n      DISTANCE CONVERTER      ");
+            Console.WriteLine("\n        By Dwayne Wilson         ");
+            Console.WriteLine("\n------------------------------");
+        }
+        
+>>>>>>> 83cb233aa7eb8b9c8a4f72f7656a83ffcb859fd7
 
     }
    
