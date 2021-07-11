@@ -27,34 +27,10 @@ namespace ConsoleAppProject
             Console.WriteLine();
             Console.Beep();
 
-            string[] choices = {" Distance Converter", " BMI Calculator", " Student Grades",
-            " Social Network", " RPG Game"
-            };
+            DistanceConverter  converter = new DistanceConverter();
+            converter.Run();
 
-            int choice = ConsoleHelper.SelectChoice(choices);
-
-            if (choice == 1)
-            {
-                DistanceConverter converter = new DistanceConverter();
-                converter.ConvertDistance();
-            }
-            else if (choice == 2)
-            {
-
-
-                App02.BMI calculator = new App02.BMI();
-                calculator.Run();
-            }
-            else if (choice == 3)
-            {
-                StudentGrades grader = new StudentGrades();
-                grader.Run();
-            }
-            else if (choice == 4)
-            {
-                SocialNetwork social = new SocialNetwork();
-                social.Run();
-            }
+           
 
         }
     }
