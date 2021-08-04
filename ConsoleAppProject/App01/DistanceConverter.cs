@@ -10,8 +10,8 @@ namespace ConsoleAppProject.App01
     /// <author>
     /// Dwayne Wilson version 0.3
     /// </author>
-    
-    public class DistanceConverter 
+
+    public class DistanceConverter
     {
         public const int FEET_IN_MILES = 5280;
         public const double METRES_IN_MILES = 1609.34;
@@ -22,65 +22,47 @@ namespace ConsoleAppProject.App01
         /// Conversions constants
         /// </summary>
         /// 
-       
-        private double miles;
-
-        private double feet;
 
 
-        /// <summary>
-        /// this is the line of code that get called up from the program class
-        /// </summary>
-        public void Run() 
+        public const string FEET = "Feet";
+        public const string METRES = "Metres";
+        public const string MILES = "Miles";
+
+        private double fromDistance;
+        private double toDistance;
+
+        private string fromUnit;
+        private string toUnit;
+
+        public DistanceConverter()
         {
-            OutputHeading("Distance converter");
-            InputMiles();
-            CalculateFeet();
-            OutputFeet();
+            fromUnit = MILES;
+            toUnit = FEET;
         }
 
-         /// <summary>
+
+        
+
+        /// <summary>
         /// this method will input the distance measured in miles calculate 
         /// the same distance in feet and output the distance in feet.
         /// </summary>
-        public void MilesToFeet() 
+        public void ConvertDistance()
         {
-            OutputHeading("Converting Miles to Feet");
-            miles = InputDistance("enter the number of miles > ");
-            CalculateFeet();
-            OutputFeet();
+            OutputHeading($" Converting {fromUnit} to {toUnit}");
+            fromDistance = InputDistance($"enter the number of {fromUnit} > ");
+            //CalculateFeet();
+            OutputDistance(fromDistance, fromUnit, toDistance, toUnit);
         }
 
-         /// <summary>
-        /// this method will input the distance measured in feet calculate 
-        /// the same distance in miles and output the distance in feet.
-        /// </summary>
-        public void FeetToMiles() 
-        {
-            OutputHeading("Converting Feet to Miles");
-            feet = InputDistance("enter the number of feet > ");
-            CalculateFeet();
-            OutputFeet();
-        }
-
-         /// <summary>
-        /// this method will input the distance measured in miles calculate 
-        /// the same distance in meters and output the distance in feet.
-        /// </summary>
-        public void MilesToMeters() 
-        {
-            OutputHeading("Converting Miles to Meters");
-            miles = InputDistance("enter the number of miles > ");
-            CalculateFeet();
-            OutputFeet();
-        }
+  
 
 
 
         /// <summary>
         /// This is a short descripton of the programme and the author of it
         /// </summary>
-        private void OutputHeading(String prompt) 
+        private void OutputHeading(String prompt)
         {
             Console.WriteLine("\n------------------------------");
             Console.WriteLine("\n      DISTANCE CONVERTER      ");
@@ -96,7 +78,7 @@ namespace ConsoleAppProject.App01
         /// </summary>
         /// <param name="prompt"></param>
         /// <returns></returns>
-        private double InputDistance(string prompt) 
+        private double InputDistance(string prompt)
         {
             Console.Write(prompt);
             string value = Console.ReadLine();
@@ -113,28 +95,25 @@ namespace ConsoleAppProject.App01
         {
             Console.Write("Enter the amount of miles > ");
             string value = Console.ReadLine();
-            miles = Convert.ToDouble(value);
+           // miles = Convert.ToDouble(value);
 
         }
 
-        /// <summary>
-        /// This method calcluates the distances
-        /// depending on what the user has choose.
-        /// </summary>
+    
 
-        private void CalculateFeet()
+        ///<summary>
+        ///
+        ///</summary>
+        private void OutputDistance(
+            double fromDistance, string fromUnit, double toDistance, string toUnit)
         {
-            feet = miles * 5280;
-
+        Console.WriteLine($" {fromDistance}   {fromUnit}" + $" is {toDistance} {toUnit}!" ); 
         }
 
         /// <summary>
         /// 
         /// </summary>
-        private void OutputFeet() 
-        {
-            Console.WriteLine(miles + " miles is " + feet + " feet! ");
-        }
+
 
 
 
