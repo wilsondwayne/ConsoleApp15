@@ -1,20 +1,20 @@
 ﻿using System;
+using System.Linq;
 namespace ConsoleAppProject.App92
 {
 
     public class RiverApp2
     {
-        private double[] WeeklyTemp;
+        private double[] WeeklyTemp = new double[7];
         private double[] WeeklyOxygen = new double[7];
         private double[] WeeklyWaterLevel = new double[7];
         private string[] days = {"Monday", "Tuesday", "Wednesday","Thursday",
                                  "Friday","Saturday","Sunday"};
         public void Run()
         {
-            InputChessRiverData();
-            InputColneRiverData();
-            InputGadeRiversData();
 
+            InputChessRiverData();
+            FindAvg();
         }
 
         public void SetupTestData()
@@ -57,17 +57,17 @@ namespace ConsoleAppProject.App92
                 $"Water Levels " + $"Height(metres) {WeeklyWaterLevel[i]}");
             }
         }
-
-        public void InputGadeRiversData()
+        public void FindAvg()
         {
-            Console.WriteLine("THIS IS THE RIVER GADE DATA");
-            InputChessRiverData();
-        }
+            double TempAvg = Queryable.Average(WeeklyTemp.AsQueryable());
 
-        public void InputColneRiverData()
-        {
-            Console.WriteLine("THIS IS THE RIVER COLNE DATA");
-            InputChessRiverData();
+            double OxgenAvg = Queryable.Average(WeeklyOxygen.AsQueryable());
+
+            double WaterHeightAvg = Queryable.Average(WeeklyWaterLevel.AsQueryable());
+            
+            Console.WriteLine($"\n\n\n Average Weekly Temp {TempAvg}\n");
+            Console.WriteLine($"\n\n Average Weekly Oxygen Levels {OxgenAvg}");
+            Console.WriteLine($"\n\n Average Weekly Water Levels {WaterHeightAvg}");
         }
     }
 }
