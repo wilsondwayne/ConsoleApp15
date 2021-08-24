@@ -2,6 +2,8 @@
 using ConsoleAppProject.App01;
 using ConsoleAppProject.App03;
 using ConsoleAppProject.App04;
+using ConsoleAppProject.App92;
+
 
 namespace ConsoleAppProject
 {
@@ -27,9 +29,12 @@ namespace ConsoleAppProject
             Console.WriteLine();
             Console.Beep();
 
-            DistanceConverter  converter = new DistanceConverter();
+           // DistanceConverter  converter = new DistanceConverter();
            
-            converter.ConvertDistance();
+           // converter.ConvertDistance();
+
+            RiverApp2 river = new RiverApp2();
+            river.Run();
            
 
         }
